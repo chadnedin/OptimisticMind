@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+
+<html>
+<title></title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/styles.css" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/qrcode.js"></script>
+<script src="js/infoMenu.js" ></script>
+
+
+<body>
+<div class="container panel panel-default">
+<div class="col-lg-8 col-lg-offset-2">
+    <div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="background" src="">
+
+        </div>
+        <div class="useravatar">
+            <img alt="" src="images/logo.png">
+        </div>
+        <div class="card-info"> <span class="card-title">Name</span>
+          
+        </div>
+    </div>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"  title="Personal Info"><span class="fa fa-address-card"  aria-hidden="true"></span>
+                <div class="hidden-xs">Personal Information</div>
+            </button>
+        </div>
+		<div class="btn-group" role="group">
+            <button type="button" id="stars" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="fa fa-medkit" aria-hidden="true"></span>
+                <div class="hidden-xs">Medical Information</div>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" id="favorites" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="fa fa-cutlery" aria-hidden="true"></span>
+                <div class="hidden-xs">Dietary</div>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" id="following" class="btn btn-default" href="#tab4" data-toggle="tab"><span class="fa fa-commenting" aria-hidden="true"></span>
+                <div class="hidden-xs">Notes</div>
+         </div>
+    </div> 
+
+        <div class="well">
+      <div class="tab-content">
+	 
+	  
+	    <div class="tab-pane fade in active" id="tab1">
+           <form class="form-horizontal" id="form_patient" role="form">
+		   <legend>Personal Information</legend>
+		  <div class="form-group">
+		  <label for="firstname"class="col-sm-2">First Name</label>
+		  <div class="col-sm-4">
+		  <input type="text" class= name="first_name" id="first_name" placeholder="First Name">
+		  </div>
+		  <label for="lastname"class="col-sm-2">Last Name</label>
+		  <div class="col-sm-4">
+		  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name">
+		  </div>
+		  </div>
+		  <div class="form-group">
+		  <label for="gender" class="col-sm-2">Gender</label>
+		  <div class="col-sm-4">
+		  <label class="radio-inline">
+		  <input type="radio" name="gender" id="male" value="male"> Male</label>
+		  <label class="radio-inline">
+		  <input type="radio" name="gender" id="female" value="female"> Female</label>
+		  </div>
+		  <label for="dob" class="col-sm-2">Date of Birth</label>
+		  <div class="col-sm-4">
+		  <input type="date" class="form-control" name="dob" id="dod" placeholder="mm/dd/yyyy">
+		 </div>
+		 </div>
+		 
+		
+		 
+		 
+		 <div class="form-group">
+		 <label for="religion" class="col-sm-2">Religion</label>
+		 <div class="col-sm-4">
+		 <input type="text" class="form-control" name="religion" id="religion" placeholder="Religion">
+		 </div>
+		  <label for="eyewear" class="col-sm-2">Eyewear</label>
+		  <div class="col-sm-4">
+		  <label class="radio-inline">
+		  <input type="radio" name="eyewear" id="yes" value="yes"> Yes</label>
+		  <label class="radio-inline">
+		  <input type="radio" name="eyewear" id="no" value="no"> No</label>
+		  </div>
+		 </div>
+		  <div class="form-group">
+		  <label for="phone" class="col-sm-2">Phone</label>
+		  <div class="col-sm-4">
+		  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Noumber">
+		  </div>
+		  <label for="email" class="col-sm-2">Email</label>
+		  <div class="col-sm-4">
+		  <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+		  </div>
+		  </div>	
+		   <div class="form-group">
+			<label for="emergcontact" class="col-sm-2">Emergency Contact Info</label>
+			<div class="col-sm-10">
+			<textarea rows="5" class="form-control" name="emergcontact" id="emergcontact">Please Enter all Emergency Contact Information </textarea>
+				</div>
+		</div>
+		  <div class="form-group">
+		  <label for="address" class="col-sm-2">Address</label>
+		  <div class="col-sm-4">
+		  <input type="text" class="form-control" name="address" id="address" placeholder="Num + Street + City">
+		  </div>
+		  <label for="province" class="col-sm-2">Province</label>
+		  <div class="col-sm-4">
+		  <input type="text" class="form-control" list="provinces" name="province" id="city" placeholder="Province">
+		  <datalist id="provinces">
+			<option value="Alberta">
+			<option value="British Columbia">
+			<option value="Manitoba">
+			<option value="New Brunswick">
+			<option value="Newfoundland and Labrador">
+			<option value="Nova Scotia">
+			<option value="Ontario">
+			<option value="Prince Edward Island">
+			<option value="Quebec"> 
+			<option value="Saskatchewan">
+			<option value="Northwest Territories">
+			<option value="Yukon">
+			<option value="Nunavut">
+			</datalist>
+			</div>
+			</div>
+		  
+		  <div class="form-group">
+		  <button type="submit" class="btn btn-default" name="submit" id="submit">Submit</button>
+		  </div>
+		  </div>
+		  
+		  
+		
+        <div class="tab-pane fade in" id="tab2">
+		
+		
+		<legend>Medical Information</legend>
+		  <div class="form-group">
+		  <label for="disease"class="col-sm-2">Disease Info</label>
+		  <div class="col-sm-4">
+		  <textarea rows="5" class="form-control" name="disease" id="disease">Please Enter all Disease Information </textarea>
+		  </div>
+		  <label for="dementiastage"class="col-sm-2">Stage of Dementia</label>
+		  <div class="col-sm-4">
+		  <input type="text" class="form-control" name="dementiastage" id="dementiastage" placeholder="Stage of Dementia">
+		  </div>
+		  </div>
+		  
+		
+
+		
+		<p><i></i>Hearing:</p>
+		<p><i></i>Equipment:</p>
+		<p><i></i>Allergies:</p>
+          <h3>Current Medications</h3>
+		  <table style="width:100%">
+  			<tr>
+   			 <th>Perscription</th>
+   			 <th>Instructions</th> 
+  			</tr>
+ 		    <tr>
+    			<td>Tylenol</td>
+    			<td>Smith</td> 
+  			</tr>
+  			<tr>
+   				<td>Eve</td>
+    			<td>Jackson</td> 
+  			</tr>
+		</table> 
+
+          <h3>Previous Medications</h3>
+		  <table style="width:100%">
+  			<tr>
+   			 <th>Perscription</th>
+   			 <th>Instructions</th> 
+  			</tr>
+ 		    <tr>
+    			<td>Tylenol</td>
+    			<td>Smith</td> 
+  			</tr>
+  			<tr>
+   				<td>Eve</td>
+    			<td>Jackson</td> 
+  			</tr>
+		</table> 
+		
+        </div>
+        <div class="tab-pane fade in" id="tab3">
+		
+          <legend>Dietary Information</legend>
+		  <div class="form-group">
+		  <label for="description" class="col-sm-2">Food Preferences</label>
+		  <div class="col-sm-10">
+<textarea rows="5" class="form-control" name="desc" id="desc">Please Enter all Emergency Contact Information </textarea>
+		  </div>
+		  </div>
+		  <button type="submit" class="form_control" name="submit" id="submit">Submit</submit>
+		  
+        </div>
+        <div class="tab-pane fade in" id="tab4">
+          
+          <legend>Notes</legend>
+		  <div class="form-group">
+		  <label for="notes" class="col-sm-2">Notes</label>
+		  <div class=col-sm-4>
+			<textarea  rows="10" cols="50" class="form_control" name="description" id="description" placeholder="I Like Bananaskm" form="form_dietary" ></textarea>
+		  </div>
+		  </div>
+		  <button type="submit" class="form_control" name="submit" id="submit">Submit</submit>
+		  
+		  <button><div class="btn-pref btn-group btn-group-justified btn-group-lg" id="finish"
+		    onclick="generateQR()">QR</button>
+		  </div>
+		  <div id="qrcode"></div>
+        </div>
+		</form>
+      </div>
+	  
+    </div>
+    
+    </div>
+</div>
+    </body>
+	</html>
+	
